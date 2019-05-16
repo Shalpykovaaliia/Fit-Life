@@ -63,22 +63,7 @@ public class Register extends JFrame {
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(Checker.checkAll(nicknameInput.getText(),passwordField1.getText(),nameInput.getText(),surnameInput.getText(),Checker.gender(maleRadioButton.isSelected(),femaleRadioButton.isSelected()),ageInput.getText(), weightInput.getText(), heightInput.getText(),Checker.active(notActiveRadioButton.isSelected(),activeRadioButton.isSelected(),superActiveRadioButton.isSelected()),Checker.goal(looseRadioButton.isSelected(),maintainRadioButton.isSelected(),gainRadioButton.isSelected()))){
-                    if(!getInfo.isExist(nicknameInput.getText(),passwordField1.getText())){
-                        fileInfo.writeFile(nicknameInput.getText(),passwordField1.getText(),nameInput.getText(),surnameInput.getText(),maleRadioButton.isSelected() ? "Male" : "Female",ageInput.getText(), weightInput.getText(), heightInput.getText(),notActiveRadioButton.isSelected() ? "Not Active" : (activeRadioButton.isSelected() ? "Active" : "Super Active"), looseRadioButton.isSelected() ? "Loose" : (maintainRadioButton.isSelected() ? "Maintain" : "Gain"));
-                        JOptionPane.showMessageDialog(null,"You have registered successful","Info", JOptionPane.PLAIN_MESSAGE );
-                        display.myTextField.setText(nicknameInput.getText());
-                        display.passwordField.setText(passwordField1.getText());
-                        new Calories(display,formulas.getCalories(nicknameInput.getText(),passwordField1.getText()));
-                        frame.dispose();
-                    } else {
-                        int dialogButton = JOptionPane.YES_NO_OPTION;
-                        int dialogResult = JOptionPane.showConfirmDialog (null, "This nickname is already exist, would you like to login with this nickname?","Warning",dialogButton);
-                        if(dialogResult == JOptionPane.YES_OPTION){
-                            display.myTextField.setText(nicknameInput.getText());
-                            display.passwordField.setText(passwordField1.getText());
-                            new Calories(display,formulas.getCalories(nicknameInput.getText(),passwordField1.getText()));
-                            frame.dispose();
+             
                         }
                     }
 
