@@ -1,0 +1,26 @@
+.main {
+    color: #ffffff;
+}
+body {
+    margin: 0;
+    background: #404C8E;
+    width: 900px;
+    height: 500px;
+}
+.list{
+    background-color: #F16E38;
+    padding: 10px;
+    font-family: italic;
+    border-radius: 5px;
+
+
+}
+.title{
+    background-color: #404C8E;
+}
+.meal{
+    background-color: #404C8E;
+    padding: 10px;
+    font-family: italic;
+
+}
