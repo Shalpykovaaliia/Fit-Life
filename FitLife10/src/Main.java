@@ -47,7 +47,17 @@ public class Main {
             });
         }
 
-      
+public void load(){
+            try{
+                background = new ImageIcon(ImageIO.read(new FileInputStream("imgs/background.jpg")));
+                button1 = new ImageIcon(ImageIO.read(new FileInputStream("imgs/lgn.png")));
+                button2 = new ImageIcon(ImageIO.read(new FileInputStream("imgs/sv.png")));
+                panelb = new ImageIcon(ImageIO.read(new FileInputStream("imgs/panel.png")));
+            } catch (Exception e){
+                System.out.println(e);
+            }
+
+        }
 
         private void display() {
             frame.pack();
